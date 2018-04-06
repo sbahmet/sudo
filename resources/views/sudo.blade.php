@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>Sudo</div>
+    <cand :cand-val="42"></cand>
 @endsection

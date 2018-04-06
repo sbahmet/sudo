@@ -1,13 +1,15 @@
 <template>
-    
+    <div class="cand">{{ val }}</div>
 </template>
 
 <script>
     export default {
-        props: [],
+        props: ['candVal'],
 
         data(){
-            return {};
+            return {
+                val: this.candVal
+            };
         }
     }
 </script>
