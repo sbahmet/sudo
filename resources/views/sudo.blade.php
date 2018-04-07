@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    <cand :cand-val="42"></cand>
+    <cell :data="{cands:[1,3,4,7,8]}"></cell>
 @endsection

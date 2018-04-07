@@ -17,6 +17,7 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('cand', require('./components/Candidate.vue'));
+Vue.component('cell', require('./components/Cell.vue'));
 
 const app = new Vue({
     el: '#app'
