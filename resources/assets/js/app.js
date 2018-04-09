@@ -18,7 +18,26 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('cand', require('./components/Candidate.vue'));
 Vue.component('cell', require('./components/Cell.vue'));
+Vue.component('block3', require('./components/Block3.vue'));
+
+let block = {
+    cells: [
+        {cands:[1,3,4,7,8]},
+        {cands:[2,4,5,6,8]},
+        {cands:[7], val:7},
+        {cands:[2,4,5,6,8]},
+        {cands:[2,4,5,6,8]},
+        {cands:[2,4,5,6,8]},
+        {cands:[2,4,5,6,8]},
+        {cands:[2,4,5,6,8]},
+        {cands:[2,4,5,6,8]}
+    ],
+    id:1
+};
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+        block
+    }
 });

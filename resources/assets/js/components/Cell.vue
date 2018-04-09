@@ -1,6 +1,6 @@
 <template>
     <div class="cell">
-        <div v-if="cell.val">
+        <div v-if="cell.val" class="cell-val-wrap">
             {{ cell.val }}
         </div>
         <div v-else>
@@ -27,8 +27,7 @@
             };
         },
         created() {
-            console.log('cell created');
-            console.log(this.data);
+
         }
     }
 </script>
@@ -39,5 +38,9 @@
         height: 38px;
         border: 1px solid grey;
         font-size: 22px;
+        float: left;
+    }
+    .cell-val-wrap {
+        text-align: center;
     }
 </style>
