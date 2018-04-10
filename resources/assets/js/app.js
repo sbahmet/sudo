@@ -19,6 +19,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 Vue.component('cand', require('./components/Candidate.vue'));
 Vue.component('cell', require('./components/Cell.vue'));
 Vue.component('block3', require('./components/Block3.vue'));
+Vue.component('field', require('./components/Field.vue'));
 
 let block = {
     cells: [
@@ -35,9 +36,17 @@ let block = {
     id:1
 };
 
+let blocks = [
+    block,block,block,
+    block,block,block,
+    block,block,block
+];
+
+window.blocks = blocks;
+
 const app = new Vue({
     el: '#app',
     data: {
-        block
+        blocks
     }
 });

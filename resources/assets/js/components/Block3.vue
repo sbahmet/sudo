@@ -28,5 +28,7 @@
         width: 116px;
         height: 116px;
         border: 1px solid black;
+        float:left;
+        margin: 1px;
     }
 </style>

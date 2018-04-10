@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    <block3 :data="block"></block3>
+    <field :data="blocks"></field>
 @endsection
