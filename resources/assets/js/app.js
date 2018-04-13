@@ -24,7 +24,7 @@ Vue.component('field', require('./components/Field.vue'));
 let block = {
     cells: [
         {cands:[1,3,4,7,8]},
-        {cands:[2,4,5,6,8]},
+        {cands:[2,4,5,6,8], val: null},
         {cands:[7], val:7},
         {cands:[2,4,5,6,8]},
         {cands:[2,4,5,6,8]},
