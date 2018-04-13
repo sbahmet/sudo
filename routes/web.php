@@ -27,3 +27,5 @@ Route::get('state', 'StateTestController@index');
 
 Route::get('sd', 'SudController@show');
 
+Route::get('html-parser', 'HtmlParserController@index');
+
