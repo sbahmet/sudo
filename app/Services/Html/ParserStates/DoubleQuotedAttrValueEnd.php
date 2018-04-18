@@ -42,7 +42,7 @@ class DoubleQuotedAttrValueEnd extends AbstractParsingState
     }
 
 
-    public function AttrNameStart()
+    public function attrNameStart()
     {
 
     }

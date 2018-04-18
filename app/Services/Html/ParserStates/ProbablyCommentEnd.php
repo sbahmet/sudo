@@ -42,7 +42,7 @@ class ProbablyCommentEnd extends AbstractParsingState
     }
 
 
-    public function AttrNameStart()
+    public function attrNameStart()
     {
 
     }

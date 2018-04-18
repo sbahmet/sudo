@@ -21,7 +21,7 @@ interface ParsingState
     public function closingTag();
 
 
-    public function AttrNameStart();
+    public function attrNameStart();
 
     public function attrNameEnd();
 

@@ -42,7 +42,7 @@ class SingleQuotedAttrValueStart extends AbstractParsingState
     }
 
 
-    public function AttrNameStart()
+    public function attrNameStart()
     {
 
     }

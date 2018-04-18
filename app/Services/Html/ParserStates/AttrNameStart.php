@@ -42,7 +42,7 @@ class AttrNameStart extends AbstractParsingState
     }
 
 
-    public function AttrNameStart()
+    public function attrNameStart()
     {
 
     }

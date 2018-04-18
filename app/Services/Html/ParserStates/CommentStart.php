@@ -42,7 +42,7 @@ class CommentStart extends AbstractParsingState
     }
 
 
-    public function AttrNameStart()
+    public function attrNameStart()
     {
 
     }

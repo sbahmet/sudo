@@ -42,7 +42,7 @@ class TagNameEnd extends AbstractParsingState
     }
 
 
-    public function AttrNameStart()
+    public function attrNameStart()
     {
 
     }

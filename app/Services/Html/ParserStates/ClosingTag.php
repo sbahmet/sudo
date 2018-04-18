@@ -42,7 +42,7 @@ class ClosingTag extends AbstractParsingState
     }
 
 
-    public function AttrNameStart()
+    public function attrNameStart()
     {
 
     }

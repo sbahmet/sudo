@@ -10,6 +10,6 @@ class HtmlParserController extends Controller
 {
     public function index(Request $request, HtmlParser $htmlParser)
     {
-        return $htmlParser->getString();
+        return $htmlParser->parse()->getString();
     }
 }
