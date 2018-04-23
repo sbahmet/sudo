@@ -20,15 +20,17 @@ Vue.component('cand', require('./components/Candidate.vue'));
 Vue.component('cell', require('./components/Cell.vue'));
 Vue.component('block3', require('./components/Block3.vue'));
 Vue.component('field', require('./components/Field.vue'));
+Vue.component('row-selector', require('./components/RowSelector.vue'));
+
 
 let block = {
     cells: [
         {cands:[1,3,4,7,8]},
         {cands:[2,4,5,6,8], val: null},
         {cands:[7], val:7},
+        {cands:[2,4,5,6,8], isMaster: true},
         {cands:[2,4,5,6,8]},
-        {cands:[2,4,5,6,8]},
-        {cands:[2,4,5,6,8]},
+        {cands:[2,4,5,6,8], isCurrent: true},
         {cands:[2,4,5,6,8]},
         {cands:[2,4,5,6,8]},
         {cands:[2,4,5,6,8]}

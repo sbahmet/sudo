@@ -45,8 +45,8 @@
     .cand.cand-the-one {
         color: #295f46;
         font-size: 16px;
-        position: absolute;
-        left: 50%;
-        top: 25%;
+        position: relative;
+        /*left: 35%;
+        top: 35%;*/
     }
 </style>

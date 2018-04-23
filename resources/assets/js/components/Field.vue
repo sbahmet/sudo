@@ -4,6 +4,9 @@
                :key="index"
                :data="block"
         ></block3>
+        <row-selector
+                :data="blocks"
+        ></row-selector>
     </div>
 </template>
 
@@ -29,5 +32,6 @@
         height: 356px;
         border: 1px solid grey;
         margin: auto;
+        position: relative;
     }
 </style>
