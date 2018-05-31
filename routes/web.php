@@ -29,3 +29,5 @@ Route::get('sd', 'SudController@show');
 
 Route::get('html-parser', 'HtmlParserController@index');
 
+Route::get('g-sheet-test', 'GoogleSheetsExample@index');
+
