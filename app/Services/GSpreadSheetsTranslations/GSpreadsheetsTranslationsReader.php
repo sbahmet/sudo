@@ -30,7 +30,7 @@ class GSpreadsheetsTranslationsReader
             $accessToken = json_decode(\Storage::get('google/credentials.json'), true);
         } else {
 
-            // TODO:
+            // TODO: console input via artisan tool
 
             // Request authorization from the user.
             $authUrl = $client->createAuthUrl();
@@ -69,7 +69,10 @@ class GSpreadsheetsTranslationsReader
 
         // https://docs.google.com/spreadsheets/d/1Hgv8WgTqP8UIh-ryOE3YG8UkI0thilQhGdMeEYD_-So/edit?usp=sharing
         $spreadsheetId = '1Hgv8WgTqP8UIh-ryOE3YG8UkI0thilQhGdMeEYD_-So';
+
+        // todo: make another storing strategy: one sheet = one lang
         $range = 'List1!A2:L';
+
         $response = $service->spreadsheets_values->get($spreadsheetId, $range);
 
         $values = $response->getValues();
@@ -188,13 +191,19 @@ class GSpreadsheetsTranslationsReader
 
         $langPath = resource_path('lang');
 
-        foreach ($translationsByFiles as $locale => $fileList) {
-            foreach($fileList as $filename => $dictionary) {
-                if (is_dir($langPath.'/'. $locale)) {
-                    self::delTree($langPath.'/'. $locale);
-                }
+        $fileHeader = '<?php'.PHP_EOL.PHP_EOL .'return '
+        ;
 
-                mkdir($langPath.'/'. $locale);
+        foreach ($translationsByFiles as $locale => $fileList) {
+            if (is_dir($langPath.'/'. $locale)) {
+                self::delTree($langPath.'/'. $locale);
+            }
+            mkdir($langPath.'/'. $locale);
+            foreach($fileList as $filename => $dictionary) {
+                file_put_contents(
+                    $langPath.'/'. $locale.'/'.$filename.'.php',
+                    $fileHeader . var_export($dictionary, true).';'
+                );
             }
         }
     }

@@ -13,6 +13,6 @@ class GoogleSheetsExample extends Controller
 
         $gSheetsTransReader->process();
 
-        return 1;
+        return __('main.welcome') .' '. __('auth.email') . __('auth.password');
     }
 }
