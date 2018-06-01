@@ -11,6 +11,8 @@ class GoogleSheetsExample extends Controller
     {
         $gSheetsTransReader = new GSpreadsheetsTranslationsReader();
 
-        dd($gSheetsTransReader->process());
+        $gSheetsTransReader->process();
+
+        return 1;
     }
 }
