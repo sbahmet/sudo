@@ -1,5 +1,6 @@
 <?php
 
 return array (
-  'password' => 'Passworrtenschen',
+  'email' => 'Elektron-mail',
+  'password' => 'Passwort',
 );
