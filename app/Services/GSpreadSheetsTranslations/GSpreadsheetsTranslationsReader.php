@@ -24,8 +24,6 @@ class GSpreadsheetsTranslationsReader
 
         // Load previously authorized credentials from a file.
 
-        $credentialsFileExists = \Storage::exists('google/credentials.json');
-
         if(\Storage::exists('google/credentials.json')) {
             $accessToken = json_decode(\Storage::get('google/credentials.json'), true);
         } else {
@@ -191,8 +189,7 @@ class GSpreadsheetsTranslationsReader
 
         $langPath = resource_path('lang');
 
-        $fileHeader = '<?php'.PHP_EOL.PHP_EOL .'return '
-        ;
+        $fileHeader = '<?php'.PHP_EOL.PHP_EOL .'return ';
 
         foreach ($translationsByFiles as $locale => $fileList) {
             if (is_dir($langPath.'/'. $locale)) {
