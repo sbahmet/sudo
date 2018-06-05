@@ -1,6 +1,6 @@
 <?php
 
 return array (
-  'welcome' => 'Welkommen',
-  'login-to-proceed' => 'de-login to proceed',
+  'welcome' => 'Welkommen der sitt!',
+  'login-to-proceed' => 'login aughsteigen',
 );

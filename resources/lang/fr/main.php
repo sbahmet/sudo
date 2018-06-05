@@ -1,5 +1,6 @@
 <?php
 
 return array (
-  'welcome' => 'fr-welcome',
+  'welcome' => 'salut',
+  'login-to-proceed' => 'log in avec',
 );

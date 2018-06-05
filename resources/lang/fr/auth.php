@@ -2,5 +2,5 @@
 
 return array (
   'email' => 'email',
-  'password' => 'password',
+  'password' => 'parole',
 );

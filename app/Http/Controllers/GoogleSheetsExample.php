@@ -9,10 +9,12 @@ class GoogleSheetsExample extends Controller
 {
     public function index()
     {
-        $gSheetsTransReader = new GSpreadsheetsTranslationsReader();
+        //$gSheetsTransReader = new GSpreadsheetsTranslationsReader();
 
-        $gSheetsTransReader->process();
+        //$gSheetsTransReader->process();
 
-        return __('main.welcome') .' '. __('auth.email') . __('auth.password');
+        dd(array_dot(__('validation')));
+
+        return __('main.welcome.with-dot') .' '. __('auth.email') . __('auth.password');
     }
 }

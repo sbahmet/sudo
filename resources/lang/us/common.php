@@ -1,5 +1,5 @@
 <?php
 
 return array (
-  'new-messages' => 'You received :n new messages',
+  'new-messages' => 'you recieved :n new messages!',
 );

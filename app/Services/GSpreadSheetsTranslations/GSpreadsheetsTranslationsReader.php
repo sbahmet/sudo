@@ -68,8 +68,7 @@ class GSpreadsheetsTranslationsReader
         // https://docs.google.com/spreadsheets/d/1Hgv8WgTqP8UIh-ryOE3YG8UkI0thilQhGdMeEYD_-So/edit?usp=sharing
         $spreadsheetId = '1Hgv8WgTqP8UIh-ryOE3YG8UkI0thilQhGdMeEYD_-So';
 
-        // todo: make another storing strategy: one sheet = one lang
-        $range = 'List1!A2:L';
+        $range = 'main!A3:Z';
 
         $response = $service->spreadsheets_values->get($spreadsheetId, $range);
 
@@ -148,7 +147,7 @@ class GSpreadsheetsTranslationsReader
         foreach ($translations as $locale => $dictionary) {
             $files = [];
             foreach ($dictionary as $key => $translation) {
-                $fileSlug = explode('.', $key);
+                $fileSlug = explode('.', $key, 2);
                 $filename = $fileSlug[0];
                 $slug = $fileSlug[1];
                 if (!isset($files[$filename])) {
