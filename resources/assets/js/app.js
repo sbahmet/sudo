@@ -52,3 +52,7 @@ const app = new Vue({
         blocks
     }
 });
+
+// ==========
+
+myFramework = require('./framework/bootstrap');

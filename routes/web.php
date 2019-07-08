@@ -31,3 +31,5 @@ Route::get('html-parser', 'HtmlParserController@index');
 
 Route::get('g-sheet-test', 'GoogleSheetsExample@index');
 
+Route::resource('todo', 'TodoController');
+
