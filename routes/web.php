@@ -33,3 +33,8 @@ Route::get('g-sheet-test', 'GoogleSheetsExample@index');
 
 Route::resource('todo', 'TodoController');
 
+Route::get('recursive-sq', function () {
+    return view('recursive_square');
+});
+
+
